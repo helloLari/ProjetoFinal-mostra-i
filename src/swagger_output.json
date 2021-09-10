@@ -1,0 +1,280 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mostrai",
+    "description": "API para consumir informações sobre Bootcamps"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Bootcamps",
+      "description": "Endpoints relacionados aos recursos do Mostraí "
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    
+    "/curso": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "description": "Endpoint para obter uma lista de Bootcamps",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Bootcamp encontrado",
+            "schema": {
+              "$ref": "#/definitions/Cursos"
+            }
+          },
+          "204": {
+            "description": "Bootcamp não encontrado"
+          },
+          "500": {
+            "description": "Ops, erro na requisição!"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cursos"
+        ],
+        "description": "Endpoint para criação de Bootcamps",
+        "parameters": [
+          {
+            "name": "NovoCurso",
+            "in": "body",
+            "description": "Informações sobre o Bootcamp",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/NovoCurso"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Titulo e  categoria são obrigatórios"
+          },
+          "409": {
+            "description": "Conflict"
+          }
+        }
+      }
+    },
+    "/curso/{id}": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "description": "Endpoint para obter Bootcamps por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/curso/{id}/delete": {
+      "delete": {
+        "tags": [
+          "Cursos"
+        ],
+        "description": "Endpoint para deletar Bootcamps por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/curso/{id}/update": {
+      "put": {
+        "tags": [
+          "Cursos"
+        ],
+        "description": "Endpoint para alterar Bootcamps por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "titulo": {
+                  "example": "any"
+                },
+                "categoria": {
+                  "example": "any"
+                },
+                "tempo": {
+                  "example": "any"
+                },
+                "publico": {
+                  "example": "any"
+                },
+                "observacao": {
+                  "example": "any"
+                },
+                "empregabilidade": {
+                  "example": "any"
+                },
+                "valor": {
+                  "example": "any"
+                },
+                "inscricoes\r": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Cursos": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string",
+          "example": "55354bb8f1df34507398fae2"
+        },
+        "titulo": {
+          "type": "string",
+          "example": "Reprograma"
+        },
+        "categoria": {
+          "type": "string",
+          "example": "Backend"
+        },
+        "tempo": {
+          "type": "string",
+          "example": "16 semanas aos Sabádos"
+        },
+        "publico": {
+          "type": "string",
+          "example": "Especifico para o público feminino"
+        },
+        "observacao": {
+          "type": "string",
+          "example": "Processo seletivo feito via inscrição e workshop"
+        },
+        "empregabilidade": {
+          "type": "string",
+          "example": "Parceria com empresas"
+        },
+        "valor": {
+          "type": "string",
+          "example": "Grátis"
+        },
+        "inscricao": {
+          "type": "string",
+          "example": "2021-10-04T23:59:31.775Z"
+        },
+        "__v": {
+          "type": "number",
+          "example": 0
+        }
+      }
+    },
+    "NovoCurso": {
+      "type": "object",
+      "properties": {
+        "titulo": {
+          "type": "string",
+          "example": "Laboratória Brasil"
+        },
+        "categoria": {
+          "type": "string",
+          "example": "Front-end"
+        },
+        "tempo": {
+          "type": "string",
+          "example": "Integral"
+        },
+        "publico": {
+          "type": "string",
+          "example": "Apresentar-se e identificar-se como mulher"
+        },
+        "observacao": {
+          "type": "string",
+          "example": "Ter disponibilidade para frequentar o curso 5x por semana. O bootcamp é um programa intensivo. As aulas acontecem de segunda a sexta das 13h às 18h."
+        },
+        "empregabilidade": {
+          "type": "string",
+          "example": "Parceria com empresas"
+        },
+        "valor": {
+          "type": "string",
+          "example": ""
+        }
+      },
+      "required": [
+        "titulo",
+        "ingredientes",
+        "modoDePreparo"
+      ]
+    }
+  }
+}
