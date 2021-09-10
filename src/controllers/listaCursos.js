@@ -5,7 +5,7 @@ const app = express()
 const cors = require('cors')
 
 
-/*
+
 const getAll = (req, res) => {
     Curso.find(function (err, cursoFound) {
         if (err) {
@@ -21,12 +21,8 @@ const getAll = (req, res) => {
         }
     })
 };
-*/
-const getAll = async (req, res) => {
 
-    const cursos= await Curso.find()
-    res.status(200).json(cursos)
-}
+
 
 const getById = async (req, res) => {
     try {

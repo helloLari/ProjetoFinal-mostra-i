@@ -6,7 +6,8 @@ const controllerCreate = require("../controllers/createCursos")
 const controllerDelete = require("../controllers/deletarCursos")
 const controllerUpdate = require("../controllers/updateCursos")
 
-router.get('/bootcamps',controller.getAll);
+//router.get('/bootcamps',controller.getAll);
+router.get('/receita',controller.getAll);
 router.get("/curso/:id", controller.getById);
 
 router.post("/curso",controllerCreate.createCurso);
