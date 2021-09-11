@@ -1,4 +1,4 @@
-# Mostra-í
+# Mostra-í Bootcamps
 ## Sobre o Projeto:
 
 Mostra-í é uma plataforma de dados sobre
@@ -65,29 +65,26 @@ __________________________
 
 ## Requisitos:
 
-⭐ "/curso" Deverá retornar todos os cursos
-⭐ "/curso/{:id}" Deverá retornar as cursos por id
-⭐ "/curso" Deverá cadastrar novas cursos
-⭐ "/curso/{:id}/update" Deverá alterar os cursos por id
-⭐ "/curso/{:id}/delete" Deverá deletar bootcamp por id
+- "/curso" Deverá retornar todos os cursos
+- "/curso/{:id}" Deverá retornar as cursos por id
+- "/curso" Deverá cadastrar novas cursos
+- "/curso/{:id}/update" Deverá alterar os cursos por id
+- "/curso/{:id}/delete" Deverá deletar bootcamp por id
 ______________________________________________________
 Regras de negócio:
 
 ✅ Não deverá ser possível criar bootcamps com o mesmo nome
 
-____________________________________
+_____________________________________________________
 Dados para Collection curso
+
 id: autogerado e obrigatório
-
-
-titulo : texto e obrigatório
+titulo : texto é obrigatório
 criadoEm: data gerada automaticamente e obrigatório
 API deve retornar seguinte JSON:
 
         [
              Curso: {
-            
-                
                 _id: '55354bb8f1df34507398fae2',
             titulo: 'Reprograma',
             categoria:'Backend',
@@ -102,7 +99,7 @@ API deve retornar seguinte JSON:
 _______________________     
 
 Desenvolvida por: Larisse Rodrigues 
-Contato: https://www.linkedin.com/in/hello-lari/
+https://www.linkedin.com/in/hello-lari/
 
 
-Agradecimento: Equipe Reprograma e Turma On12 :heart: 
+Turma: On12 :heart: 
