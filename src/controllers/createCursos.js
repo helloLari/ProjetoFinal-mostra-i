@@ -4,24 +4,8 @@ const mongoose=require('mongoose')
 const Curso=require('../models/cursos')
 const cors=require('cors')
 
-const createReceita = async (req, res) => {
-  /*
-  #swagger.tags = ['Receitas']
-  #swagger.description = 'Endpoint para criar uma receita'
-  #swagger.parameters['NovaReceita'] = {
-    in: 'body',
-    description: 'Informações da receita',
-    required: true,
-    type: 'object',
-    schema: { $ref: '#/definitions/NovaReceita'}
-  }
-  #swager.responses[201] = {
-    description: 'Receita criada com sucesso'
-  }
-  #swagger.responses[400] = {
-    description: 'Titulo e ingredientes são obrigatórios'
-  }
-*/
+const createCurso = async (req, res) => {
+
 const curso = new Curso({
       _id: new mongoose.Types.ObjectId(),
       titulo: req.body.titulo,
