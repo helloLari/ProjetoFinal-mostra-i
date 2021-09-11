@@ -4,7 +4,11 @@ const mongoose=require('mongoose')
 const Curso=require('../models/cursos')
 
 const deleteCurso= (req, res) => {
-
+/*
+    #swagger.tags = ['Receitas']
+    #swagger.description = 'Endpoint para deletar receita por id' 
+  
+  */
     const requiredId = req.params.id;
     Curso.find({ id: requiredId }, function (err, curso) {
         if (err) {
@@ -33,9 +37,6 @@ const deleteCurso= (req, res) => {
         }
     })
 };
-
-
-
 module.exports={
     deleteCurso
 }

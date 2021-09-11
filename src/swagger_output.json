@@ -24,7 +24,20 @@
     "application/json"
   ],
   "paths": {
-    
+    "/": {
+      "get": {
+        "tags": [
+          "Receitas"
+        ],
+        "description": "Infos da API",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/curso": {
       "get": {
         "tags": [

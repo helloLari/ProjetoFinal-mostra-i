@@ -4,9 +4,9 @@ const mongoose=require('mongoose')
 const Curso=require('../models/cursos')
 
 const update =async(req,res)=>{
- 
+
     try{
-        //BUSCA CURSO PELO ID
+        //tenta encontrar receita pelo id 
         const curso= await Curso.findById(req.params.id)
 
         if (curso==null){
