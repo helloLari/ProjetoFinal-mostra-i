@@ -85,18 +85,20 @@ criadoEm: data gerada automaticamente e obrigatório
 API deve retornar seguinte JSON:
 
         [
-             Curso:     {
-  "titulo": "Reprograma Teens",
-  "categoria": "Backend / Front-end",
-  "tempo": "16 semanas aos Sabádos",
-  "publico": "Especifico para o público feminino, com idades entre 14 e 17 anos",
-  "observacao": "Processo seletivo feito via inscrição e workshop",
-  "empregabilidade": "-",
-  "valor": "Grátis",
-  "inscricao": "2021-10-04T23:59:31.775Z"
-},
+             Curso: {
+            
+                
+                _id: '55354bb8f1df34507398fae2',
+            titulo: 'Reprograma',
+            categoria:'Backend',
+            tempo: '16 semanas aos Sabádos',
+            publico: 'Especifico para o público feminino',
+            observacao:'Processo seletivo feito via inscrição e workshop',
+            empregabilidade:'Parceria com empresas',
+            valor:'Grátis',
+            inscricao:'2021-10-04T23:59:31.775Z',
+            }
         ]
-
 _______________________     
 
 Desenvolvida por: Larisse Rodrigues 
